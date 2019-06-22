@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://aframe.io/releases/0.9.2/aframe.min.js"></script>
+    <script src="a.js"></script>
+  </head>
+  <body>
+    <a-scene>
+        <a-assets>
+           <a-asset-item id="Heart" src="model/scene.gltf"></a-asset-item>
+        </a-assets>
+            <a-sky src="image.png"></a-sky>
+            <a-entity gltf-model="#Heart" scale="0.01 0.01 0.01" position="0 1 -2"></a-entity>
+
+            <a-entity position="0 0 1">
+                <a-camera>
+                    <a-cursor color="green"/>
+                </a-camera>
+            </a-entity>
+            <a-entity camera look-controls wasd-controls position="0 1.6 0"></a-entity>
+      </a-scene>
+  </body>
+</html>
