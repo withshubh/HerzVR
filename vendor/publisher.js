@@ -1,3 +1,19 @@
+AFRAME.registerComponent('cut-heart', {
+  schema: {
+  },
+
+  init: function () {
+    var data = this.data;
+    var el = this.el;  // <a-box>
+
+    el.addEventListener('click', function () {
+      // el.setAttribute('color', data.color);
+      $('#heartCut').attr('position', "0 0.5 -2");
+      $('#heartFull').remove();
+      console.log("Clicked");
+    });
+  }
+});
 function setupAgoraSDKforPublisher(channel){
     if(!AgoraRTC.checkSystemRequirements()) {
         alert("Your browser does not support WebRTC!");
@@ -58,3 +74,7 @@ function setupAgoraSDKforPublisher(channel){
           }
         });
 }
+
+function getQueryStringValue (key) {  
+  return decodeURIComponent(window.location.search.replace(new RegExp("^(?:.*[&\\?]" + encodeURIComponent(key).replace(/[\.\+\*]/g, "\\$&") + "(?:\\=([^&]*))?)?.*$", "i"), "$1"));  
+} 

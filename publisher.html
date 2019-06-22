@@ -9,22 +9,10 @@
     <script src="vendor/publisher.js"></script>
 
     <script>
-      AFRAME.registerComponent('cut-heart', {
-        schema: {
-        },
-    
-        init: function () {
-          var data = this.data;
-          var el = this.el;  // <a-box>
-    
-          el.addEventListener('click', function () {
-            // el.setAttribute('color', data.color);
-            $('#heartCut').attr('position', "0 0.5 -2");
-            $('#heartFull').remove();
-            console.log("Clicked");
-          });
-        }
-      });
+     var channel = getQueryStringValue('channel');
+     if(!channel){
+       location.href = 'index.html';
+     }
     </script>
   </head>
   <body>
@@ -44,7 +32,7 @@
             <a-entity camera look-controls wasd-controls position="0 1.6 0"></a-entity>
       </a-scene>
       <script>
-              setupAgoraSDKforPublisher('agora_local');
+              setupAgoraSDKforPublisher(channel);
       </script>
   </body>
 </html>

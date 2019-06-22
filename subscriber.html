@@ -5,14 +5,28 @@
 <script src="vendor/AgoraRTCSDK-2.7.0.js"></script>
 <script src="vendor/jquery.js"></script>
 <script src="vendor/subscriber.js"></script>
+<style>
+  .video_container{
+    width:800px;
+    height:500px;
+    display:inline-block;
+  }
+</style>
+<script>
+  var channel = getQueryStringValue('channel');
+  if(!channel){
+    location.href = 'index.html';
+  }
+ </script>
 </head>
 <body>
 <div id="video" style="margin:0 auto;">
-  <div id="agora_local" style="width:800px;height:500px;display:inline-block;"></div>
+  
 </div>
 
 <script>
-    setupAgoraSDKforSubscriber('agora_local');
+    setupAgoraSDKforSubscriber(channel);
+    $('#video').html(`<div class="video_container" id="${channel}"></div>`)
 </script>
 
 </body>
