@@ -29,8 +29,15 @@ function setupAgoraSDKforSubscriber(channel){
     client.on('stream-subscribed', function (evt) {
       var remoteStream = evt.stream;
       console.log("Subscribe remote stream successfully: " + remoteStream.getId());
-      remoteStream.play('agora_local');
-    })
+        $(`#${channel}`).html('');
+      remoteStream.play(channel);
+        var video = $('#video div div video');
+        if (video && video.length > 0) {
+            video[0].controls = true;
+            video[0].play();
+        }
+
+    });
     client.on('peer-leave', function(evt) {
         console.log('Peer Left');
         alert('Event has ended');

@@ -11,6 +11,12 @@
     height:500px;
     display:inline-block;
   }
+  #video {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0px;
+  }
 </style>
 <script>
   var channel = getQueryStringValue('channel');
@@ -20,13 +26,11 @@
  </script>
 </head>
 <body>
-<div id="video" style="margin:0 auto;">
-  
-</div>
+<div id="video"></div>
 
 <script>
-    setupAgoraSDKforSubscriber(channel);
-    $('#video').html(`<div class="video_container" id="${channel}"></div>`)
+  $('#video').html(`<div class="video_container" id="${channel}"></div>`)
+  setupAgoraSDKforSubscriber(channel);
 </script>
 
 </body>
