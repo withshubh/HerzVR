@@ -1,0 +1,128 @@
+
+@import url('https://fonts.googleapis.com/css?family=Gilroy:400,700');
+
+body {
+    background: #159957;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #155799, #159957);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #155799, #159957); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    font-family: Raleway, sans-serif;
+    color: #666;
+}
+img
+{
+    max-height:  480px;
+
+    margin-left: -660px;
+    margin-top: -400px;
+
+
+
+}
+.login {
+    margin: 40px 60px 0 auto;
+    padding: 40px 50px;
+    max-width: 400px;
+    height: 500px;
+    border-radius: 20px;
+    background: #fff;
+    box-shadow: 1px 1px 1px #666;
+}
+.login input {
+    width: 100%;
+    display: block;
+    box-sizing: border-box;
+    margin: 10px 0;
+    padding: 14px 12px;
+    font-size: 16px;
+    border-radius: 2px;
+    font-family: Raleway, sans-serif;
+}
+
+.login input[type=text],
+.login input[type=password] {
+    border: 1px solid #c0c0c0;
+    border-radius: 40px;
+    transition: .2s;
+}
+
+.login input[type=text]:hover {
+    border-color:  #00727D;
+    outline: none;
+    transition: all .2s ease-in-out;
+}
+
+.login input[type=submit] {
+    border: none;
+    background: #00727D;
+    color: white;
+    font-weight: bold;
+    transition: 0.2s;
+    margin: 20px 0px;
+    border-radius: 50px;
+}
+
+.join-session {
+    border: none;
+    background: #00727D;
+    color: white;
+    font-weight: bold;
+    transition: 0.2s;
+    margin: 20px 0px;
+    border-radius: 50px;
+}
+
+.login input[type=submit]:hover {
+    background: #0C97A2;
+}
+
+.login h2 {
+    margin: 20px 0 0;
+    color:#00727D;
+    font-size: 28px;
+}
+
+.login p {
+    margin-bottom: 40px;
+}
+
+.links {
+    display: table;
+    width: 100%;
+    box-sizing: border-box;
+    border-top: 1px solid #c0c0c0;
+    margin-bottom: 10px;
+}
+
+.links a {
+    display: table-cell;
+    padding-top: 10px;
+}
+
+.links a:first-child {
+    text-align: left;
+}
+
+.links a:last-child {
+    text-align: right;
+}
+
+.login h2,
+.login p,
+.login a {
+    text-align: center;
+}
+
+.login a {
+    color: #004F5A;
+    text-decoration: none;
+    font-size: .8em;
+}
+
+.login a:visited {
+    color: inherit;
+}
+
+.login a:hover {
+    text-decoration:none;
+}

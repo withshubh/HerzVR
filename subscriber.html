@@ -11,12 +11,31 @@
     height:500px;
     display:inline-block;
   }
+  h1{
+   text-align: center;
+   font-size: 32px;
+  }
   #video {
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 0px;
   }
+  .video_container {
+   background: white !important;
+   border-radius: 20px;
+   padding-right: 30px;
+   padding-bottom: 100px;
+  }
+  .video_container > div {
+   margin: 15px;
+  }
+ body{
+  background: #7474BF;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #348AC7, #7474BF);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #348AC7, #7474BF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+ }
 </style>
 <script>
   var channel = getQueryStringValue('channel');
@@ -27,9 +46,13 @@
 </head>
 <body>
 <div id="video"></div>
-
+<div style="text-align: center; position: fixed; bottom: 90px;left: 0; right: 0;">
+<div style="display: inline-block;background: white; margin-top: 50px; border-radius: 20px;">
+<img src="images/logo.png" style="max-height: 30px; padding: 10px;">
+</div>
+</div>
 <script>
-  $('#video').html(`<div class="video_container" id="${channel}"></div>`)
+  $('#video').html(`<div class="video_container" id="${channel}"><h1>No Playable Stream Found</h1></div>`)
   setupAgoraSDKforSubscriber(channel);
 </script>
 

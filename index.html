@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HerzVR - Home</title>
+    <link rel="stylesheet" href="css/home.css"/>
+    <script>
+        function joinSession() {
+            var channelEl = document.getElementById('channel');
+            window.open(`subscriber.html?channel=${channelEl.value}`,
+                'newwindow');
+            return false;
+        }
+        function hostSession() {
+            var channelEl = document.getElementById('channel');
+            location.href = `publisher.html?channel=${channelEl.value}`;
+           return false;
+        }
+    </script>
+</head>
+<body>
+<form class="login" onsubmit="return false;">
+    <img src="images/logo.png" style="max-height: 50px;margin-left: 95px;margin-top: 50px;">
+    <h2>Welcome !</h2>
+    <br><br>
+    <input type="text" id="channel" name="channel" placeholder="Channel Name"/><br>
+
+    <input type="submit" class="join-session" value="Host Surgery" onclick="hostSession();"/>
+        <input type="submit" class="join-session" onclick="joinSession();" value="Join Session"/>
+    <div class="links">
+
+    </div>
+    <div>
+        <img src="images/doctor.png"></div>
+</form>
+</body>
+</html>

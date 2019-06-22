@@ -34,7 +34,7 @@ function setupAgoraSDKforSubscriber(channel){
         var video = $('#video div div video');
         if (video && video.length > 0) {
             video[0].controls = true;
-            video[0].play();
+            video[0].play().catch(console.error);
         }
 
     });
