@@ -58,7 +58,7 @@ img
     color: white;
     font-weight: bold;
     transition: 0.2s;
-    margin: 20px 0px;
+    margin: 23px 0px;
     border-radius: 50px;
 }
 
@@ -74,6 +74,7 @@ img
 
 .login input[type=submit]:hover {
     background: #0C97A2;
+    
 }
 
 .login h2 {
