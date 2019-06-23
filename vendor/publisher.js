@@ -27,7 +27,7 @@ function setupAgoraSDKforPublisher(channel){
             console.log("User " + uid + " join channel successfully");      
               localStream = AgoraRTC.createStream({
                     streamID: uid,
-                    audio: false,
+                    audio: true,
                     video: false,
                     screen: true,
                     mediaSource: 'screen' // 'screen', 'application', 'window'
