@@ -6,12 +6,18 @@
     <script>
         function joinSession() {
             var channelEl = document.getElementById('channel');
+            if (!channelEl.value){
+                return false;
+            }
             window.open(`subscriber.html?channel=${channelEl.value}`,
                 'newwindow');
             return false;
         }
         function hostSession() {
             var channelEl = document.getElementById('channel');
+            if (!channelEl.value){
+                return false;
+            }
             location.href = `publisher.html?channel=${channelEl.value}`;
            return false;
         }
@@ -20,7 +26,7 @@
 <body>
 <form class="login" onsubmit="return false;">
     <img src="images/logo.png" style="max-height: 50px;margin-left: 95px;margin-top: 50px;">
-    <h2>Welcome !</h2>
+    <h2>Welcome</h2>
     <br><br>
     <input type="text" id="channel" name="channel" placeholder="Channel Name"/><br>
 
