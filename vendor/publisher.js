@@ -1,3 +1,4 @@
+var clicks = 0, total = 7;
 AFRAME.registerComponent('cut-heart', {
   schema: {
   },
@@ -8,9 +9,12 @@ AFRAME.registerComponent('cut-heart', {
 
     el.addEventListener('click', function () {
       // el.setAttribute('color', data.color);
-      $('#heartCut').attr('position', "0 0.5 -2");
-      $('#heartFull').remove();
-      console.log("Clicked");
+           clicks++;
+           if(clicks < total){
+            $(`#heartCut${clicks}`).attr('position', "0 -1 -2.1");
+            $(`#heartCut${clicks-1}`).remove();
+           }
+      console.log("Clicked",clicks);
     });
   }
 });
